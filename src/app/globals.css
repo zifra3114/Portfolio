@@ -2,20 +2,579 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.header{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  align-items: center;  
+  display: flex; 
+  justify-content: space-between;
+  background-color: black !important;
+  margin: 0;
+  padding: 0;
+}
+.header-button {
+justify-content: flex-end;
+  display: flex;
+   gap: 40px;
+   font-size: 40px;
+   list-style-type: none;
+   font-weight: bolder;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.logo img{
+width: 75px;
+height: 75px;
+border-radius: 50px;
+box-shadow: 0px 0px 10px 5px rgb(211, 71, 192);
+margin: 30px;
+}
+.info {
+   display: flex; 
+  
+}
+
+.name h1 {
+  font-size: 70px;
+  color: rgb(207, 98, 158);
+  white-space: nowrap;
+  overflow: hidden;
+  font-style: italic;
+  animation: typing 2.5s steps(12) infinite, cursor 4s step-end infinite;
+  margin-top: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@keyframes typing {
+  0% {
+      width: 0; 
+  }
+  100% {
+      width: 100%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+@keyframes cursor {
+  50% {
+      border-color: transparent; 
+  }
+  100% {
+      border-color: transparent; 
+  }
+}
+
+.name p{
+  font-size: 45px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.photo img {
+  width: 300px;
+  border-radius: 50%;
+  margin: 100px;
+  border: 5px solid rgb(207, 98, 158);
+  box-shadow: 0px 0px 16px 8px rgb(207, 98, 158);
+}
+.buttons{
+  display: flex;
+  gap: 30px;
+
+}
+.resume, .skills{
+  margin-top: 30px;
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(235, 150, 221);
+  border-radius: 10%;
+  width: 100px;
+  height: 35px;
+  margin-left:20px ;
+  border: 2px solid black;
+  text-align: center;
+  box-shadow: 0px 0px 16px 8px rgb(207, 98, 158);
+  
+}  
+.about-page{
+  display: flex;
+}
+.about{
+  width: 750px;
+    animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.about h1{
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 150px;
+  margin-top: 80px;
+  animation: type 2.5s steps(7) infinite, cur 4s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes type {
+  0% {
+      width: 0; 
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@keyframes cur {
+  50% {
+      border-color: transparent; 
+  }
+  100% {
+      border-color: transparent; 
+  }
+}
+
+.about h2{
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 30px;
+}
+.about p{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 30px;
+}
+.about-logo{
+  margin-left: 100px;
+ margin-top: 100px;
+ animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.Contact-page{
+  display: flex;
+}
+
+.contact{
+  animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.contact form{
+  justify-content: center;
+  max-width: 500px;
+  height: 450px;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 200px;
+  border-radius: 10px;
+  background-color: rgb(231, 172, 221);
+  
+  flex-wrap: wrap;
+}
+.contact form h1{
+font-size: 40px;
+   font-weight: 500;
+   margin-top: 20px;
+   width: 500px;
+   text-align: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style: italic;
+}
+.contact form input{
+  width: 290px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background:none ;
+  border-bottom: 2px solid rgb(10, 11, 12);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contact form #lastname,
+.contact form #mobile{
+  margin-left:20px;
+}
+.contact form h4{
+  font-size: 25px;
+  width: 600px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact form textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 80px;
+  max-height: 80px;
+}
+textarea::-webkit-scrollbar{
+  width: 1em;
+}
+textarea::-webkit-scrollbar-thumb{
+  background-color: #d19c9c;
+}
+.contact form #button{
+  border: 2px solid black;
+  border-radius: 5%;
+  font-size: 20px;
+  transition: 0,3s;
+  background-color: rgb(221, 41, 131);
+  width: 200px;
+}
+.contact form #button:hover{
+  opacity: 0.7;
+  background-color: rgb(238, 160, 203);
+}
+
+.contact-logo{
+  margin-top: 100px;
+  margin-left: 100px;
+  animation: slideInRight 1s backwards; 
+  @keyframes slideInLeft {
+      0% {
+          transform: translateX(-100%);
+      }
+      100% {
+          transform: translateX(0);
+      }
+  }
+  }
+  
+  
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.container{
+  border-radius: 20px;
+   margin: 0 auto;
+  padding:20px ; 
+    width: 800px;
+  border: 2px solid black ;
+  box-shadow: 0px 0px 10px 5px rgb(145, 15, 127);
+ background: linear-gradient(to right , rgb(230, 117, 199),rgba(231, 67, 176, 0));
+ margin-top: 50px;
+} 
+
+
+ .container h2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  padding: 2%;
+  color: black;
+  margin: 20px 0 10px ;
+  font-style: italic;
+} 
+.container ul li{
+  padding: 10px;
+  margin: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  list-style: none; 
+  font-size: 20px;
+}
+ .skills-page h3{
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  text-align: center;
+  
+ }
+ .skills-page h1{
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+  text-align: center;
+  margin: 30px;
+ }
+.progress-bg {
+    width: 50%;
+    background-color: #ffffff; 
+    margin-left: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 16px 8px rgb(207, 98, 158);
+}
+
+
+@keyframes percentAnimation {
+    from {width: 0;}
+}
+
+
+
+.page {
+  
+  animation-name: percentAnimation;
+  animation-duration: 4s;
+  text-align: center; 
+  padding: 1px;
+  color: white; 
+}
+
+.html { 
+  background-color: #7f1b91;
+  width: 90%;
+}
+
+.css {
+  background-color: #f235d9;
+  width: 80%;
+}
+
+.ts {
+  background-color: #3492ef;
+  width: 65%;
+}
+
+.parent-container{
+  width: 100%;
+  height: infinite;
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+} 
+.project-page h1{
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-weight: bolder;
+
+ 
+}
+.project-page{
+  animation: slideInRight 1s backwards; 
+  @keyframes slideInLeft {
+      0% {
+          transform: translateX(-100%);
+      }
+      100% {
+          transform: translateX(0);
+      }
+  }
+  }
+  
+  
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.project{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: rgb(248, 243, 243);
+  padding: 10px;
+  border-radius: 30px;
+  margin: 40px;
+   border: 2px solid #030405;
+   box-shadow: 0px 0px 16px 8px rgb(207, 98, 158);
+   
+}
+.project Image{
+   width: 100%;
+   height: 200px;
+    background-size: cover;
+   border-radius:20px ;
+}
+.footer {
+  background-color: #a778a3;
+  padding: 20px 0;
+  color: #fff;
+  align-items: center;
+}
+.icon{
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  
+}
+
+@media (max-width: 914px) {
+  
+
+  .header-button {
+    font-size: 30px; 
+     gap: 15px;  
+  }
+  .icon {
+    gap: 15px; 
+  }
+
+  .footer {
+  margin-top: 250px; 
+  }
+ .info, 
+ .about-page{
+  flex-direction: column;
+ }
+ .name {
+  margin-left: 150px;
+  margin-top: -150px;
+ }
+ .photo{
+  margin-left: 150px;
+ }
+}
+@media (max-width: 670px) {
+  
+
+  .header-button {
+    font-size: 20px; 
+     gap: 10px;  
+  }
+  .icon {
+    gap: 10px; 
+  }
+
+  .footer {
+    margin-top: 180px; 
+  }
+  .info{
+    flex-direction: column;
+   }
+   .name {
+    margin-left: 40px;
+    margin-top: -150px;
+    font-size: 40px;
+   }
+   .photo{
+    margin-left: 50px;
+   }
+
+   .about h1{
+    font-size: 30px;
+   }
+   .about h2{
+    font-size: 20px;
+   }
+   .about p{
+    font-size: 10px;
+   }
+   .Contact-page{
+    flex-direction: column;
+   }
+   .contact form{
+    margin-left: 70px;
+   }
+   .container{
+    width:400px;
+   }
+   .progress-bg{
+    margin-left: 150px;
+   }
+}
+@media (max-width: 442px) {
+  
+
+  .header-button {
+    font-size: 15px; 
+     gap: 5px;  
+  }
+  .icon {
+    gap: 5px; 
+  }
+
+  .footer {
+    margin-top: 100px; 
+  }
+  .info{
+    flex-direction: column;
+   }
+   .name h1 {
+font-size: 40px;
+   }
+   .name p {
+    font-size: 30px;
+       }
+   .name {
+    margin-left: 10px;
+    margin-top: -150px;
+   }
+   .photo{
+    margin-left: -30px;
+   }
+   .about{
+    margin-left:-30px;
+   }
+   .about h2{
+    font-size: 12px;
+   }
+   .about-logo{
+    margin-left: 50px;
+
+   }
+   .about-logo img{
+    width: 300px;
+    
+   }
+   .contact form{
+    margin-left: 0px;
+   }
+   .contact-logo{
+    margin-left: 40px;
+   }
+   .container{
+    width: 370px;
+   }
+   .progress-bg{
+    margin-left: 100px;
+   }
+}
+
+
